@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tienda de Deportes Hernández</title>
+<style>
+body{margin:0;font-family:Arial;background:#111;color:white}
+header{background:#0b6fa4;padding:15px;text-align:center}
+.logo{width:120px;height:auto}
+nav{background:#083b59;padding:12px;text-align:center}
+nav a{color:white;text-decoration:none;margin:15px;font-weight:bold}
+.hero{height:70vh;background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url('imagenes/fondo-deportes.jpg');background-size:cover;display:flex;align-items:center;justify-content:center;text-align:center}
+.btn{padding:12px 25px;background:#0b6fa4;color:white;border:none;border-radius:8px;cursor:pointer}
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.8);justify-content:center;align-items:center}
+.modal-content{background:#222;padding:20px;border-radius:12px;width:90%;max-width:900px;max-height:90vh;overflow:auto}
+.close{float:right;cursor:pointer;font-size:28px}
+table{width:100%;border-collapse:collapse}
+th,td{border:1px solid #555;padding:10px}
+.carousel img{width:100%;height:450px;object-fit:contain}
+footer{text-align:center;background:#000;padding:20px}
+.redes{margin-top:15px;display:flex;gap:20px;justify-content:center}
+.redes img{width:40px;height:40px;cursor:pointer;transition:transform .2s}
+.redes img:hover{transform:scale(1.1)}
+.caja{margin:20px;padding:15px;background:#222;border-radius:10px}
+</style>
+</head>
+<body>
+<header>
+<img src="imagenes/logotipo.jpeg" class="logo">
+<h1>Tienda de Deportes Hernández</h1>
+</header>
+
+<nav>
+  <a href="#" onclick="cerrarTodo()">Inicio</a>
+  <a href="#" onclick="abrirModal('productosModal')">Productos</a>
+  <a href="#" onclick="abrirModal('galeriaModal')">Galería</a>
+  <a href="#" onclick="abrirModal('contactoModal')">Contacto</a>
+  <a href="#" onclick="abrirModal('ubicacionModal')">Ubicación</a>
+  <a href="#" onclick="abrirModal('conocenosModal')">Conócenos</a>
+</nav>
+
+<section class="hero">
+<div>
+<h1>Pasión por el Deporte</h1>
+<p>Los mejores artículos deportivos</p>
+<button class="btn" onclick="abrirModal('galeriaModal')">Ver Productos</button>
+</div>
+</section>
+
+<footer>
+<p>© 2026 Tienda de Deportes Hernández</p>
+</footer>
+
+<!-- Modal Conócenos -->
+<div class="modal" id="conocenosModal">
+  <div class="modal-content">
+    <span class="close" onclick="cerrarModal('conocenosModal')">×</span>
+    <h2>Conócenos</h2>
+    <h3>¿Quiénes Somos?</h3>
+    <p>
+      Somos una tienda de deportes dedicada a ofrecer productos de calidad para todas las personas apasionadas por el deporte.
+      Buscamos que las personas se sientan satisfechas con los productos que les proporcionamos en nuestra tienda.
+      También ofrecemos los mejores productos de calidad y variedad a precios accesibles.
+    </p>
+    <h3>Misión</h3>
+    <p>
+      Brindar productos deportivos de calidad que ayuden a mejorar el rendimiento y bienestar de nuestros clientes.
+      Ofrecer atención personalizada, promociones y artículos modernos para diferentes deportes.
+      Ayudar a deportistas a encontrar todo lo necesario para que realicen sus actividades de manera cómoda y segura.
+    </p>
+    <h3>Visión</h3>
+    <p>
+      Convertirnos en una de las tiendas deportivas más reconocidas de la región en los próximos 5 a 10 años.
+      Ser reconocidos por nuestra calidad, innovación y excelente servicio al cliente.
+      Ser la mejor opción para muchas personas apasionadas por el deporte.
+    </p>
+  </div>
+</div>
+
+<!-- Modal Productos -->
+<div class="modal" id="productosModal">
+  <div class="modal-content">
+    <span class="close" onclick="cerrarModal('productosModal')">×</span>
+    <h2>Productos</h2>
+    <table>
+      <tr><th>Producto</th><th>Precio</th></tr>
+      <tr><td>Balón</td><td>$350</td></tr>
+      <tr><td>Tenis Deportivos</td><td>$950</td></tr>
+      <tr><td>Uniformes</td><td>$600</td></tr>
+      <tr><td>Mochila</td><td>$450</td></tr>
+      <tr><td>Botellas</td><td>$90</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- Modal Galería -->
+<div class="modal" id="galeriaModal">
+  <div class="modal-content">
+    <span class="close" onclick="cerrarModal('galeriaModal')">×</span>
+    <h2>Galería</h2>
+    <div class="carousel">
+      <img id="slide" src="imagenes/imagen1.jpg">
+      <h3 id="nombreProducto">Balón</h3>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Contacto -->
+<div class="modal" id="contactoModal">
+  <div class="modal-content">
+    <span class="close" onclick="cerrarModal('contactoModal')">×</span>
+    <h2>Contacto</h2>
+    <p>📞 55 40 07 49 91</p>
+    <p>📧 deporteshdz@gmail.com</p>
+
+    <div class="redes">
+      <a href="https://www.facebook.com/tuPagina" target="_blank">
+        <img src="imagenes/facebook.png" alt="Facebook">
+      </a>
+      <a href="https://www.instagram.com/tdedeporteshdz/" target="_blank">
+        <img src="imagenes/instagram.jpg" alt="Instagram">
+      </a>
+      <a href="https://wa.me/525540074991" target="_blank">
+        <img src="imagenes/whatsapp.png" alt="WhatsApp">
+      </a>
+    </div>
+
+    <form action="http://localhost:3000/guardar" method="POST">
+      <label>Nombre:</label>
+      <input type="text" name="nombre" required><br><br>
+
+      <label>Correo:</label>
+      <input type="email" name="correo" required><br><br>
+
+      <label>Mensaje:</label>
+      <textarea name="mensaje" required></textarea><br><br>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+</div>
+
+<!-- Modal Ubicación -->
+<div class="modal" id="ubicacionModal">
+  <div class="modal-content">
+    <span class="close" onclick="cerrarModal('ubicacionModal')">×</span>
+    <h2>Ubicación</h2>
+    <p>📍 Comunidad 4ta Manzana, Rancho Finca Jucan, Jilotepec, Estado de México</p>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!3m2!1ses-419!2smx!4v1783037994076!5m2!1ses-419!2smx!6m8!1m7!1soJRBpXkO7GDk7cd_JpnPFA!2m2!1d20.01497103320714!2d-99.58966552887279!3f270!4f0!5f0.7820865974627469" 
+      width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy">
+    </iframe>
+  </div>
+</div>
+<script>
+function abrirModal(id){document.getElementById(id).style.display='flex';}
+function cerrarModal(id){document.getElementById(id).style.display='none';}
+function cerrarTodo(){document.querySelectorAll('.modal').forEach(m=>m.style.display='none');}
+
+// Lista de productos con nombre e imagen para el carrusel
+const productos = [
+  { nombre: 'Uniformes', imagen: 'imagenes/imagen1.jpg' },
+  { nombre: 'Tenis Deportivos', imagen: 'imagenes/imagen2.jpg' },
+  { nombre: 'Accesorios', imagen: 'imagenes/imagen3.jpg' },
+  { nombre: 'Mochila', imagen: 'imagenes/imagen4.jpg' },
+  { nombre: 'Botellas', imagen: 'imagenes/imagen5.jpg' },
+  { nombre: 'Balones', imagen: 'imagenes/imagen6.jpg' }
+];
+
+let i = 0;
+function cambiar(){
+  document.getElementById('slide').src = productos[i].imagen;
+  document.getElementById('nombreProducto').innerText = productos[i].nombre;
+  i = (i + 1) % productos.length;
+}
+setInterval(cambiar, 2000);
+cambiar();
+</script>
+</body>
+</html>
