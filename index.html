@@ -94,7 +94,6 @@ footer{text-align:center;background:#000;padding:20px}
   </div>
 </div>
 
-<!-- Modal Galería -->
 <div class="modal" id="galeriaModal">
   <div class="modal-content">
     <span class="close" onclick="cerrarModal('galeriaModal')">×</span>
@@ -106,7 +105,6 @@ footer{text-align:center;background:#000;padding:20px}
   </div>
 </div>
 
-<!-- Modal Contacto -->
 <div class="modal" id="contactoModal">
   <div class="modal-content">
     <span class="close" onclick="cerrarModal('contactoModal')">×</span>
@@ -158,7 +156,6 @@ function abrirModal(id){document.getElementById(id).style.display='flex';}
 function cerrarModal(id){document.getElementById(id).style.display='none';}
 function cerrarTodo(){document.querySelectorAll('.modal').forEach(m=>m.style.display='none');}
 
-// Lista de productos con nombre e imagen para el carrusel
 const productos = [
   { nombre: 'Uniformes', imagen: 'imagenes/imagen1.jpg' },
   { nombre: 'Tenis Deportivos', imagen: 'imagenes/imagen2.jpg' },
