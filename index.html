@@ -123,8 +123,9 @@ footer{text-align:center;background:#000;padding:20px}
         <img src="imagenes/whatsapp.png" alt="WhatsApp">
       </a>
     </div>
-
-    <form action="http://localhost:3000/guardar" method="POST">
+    
+     <form name="clientes" method="POST" data-netlify="true" action="/mensaje.html">
+     <input type="hidden" name="form-name" value="clientes">
       <label>Nombre:</label>
       <input type="text" name="nombre" required><br><br>
 
